@@ -1,0 +1,147 @@
+
+.input {
+  width: 40%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #999;
+  font-family: Arial;
+  font-size: 3em;
+  color: orange;
+
+}
+
+.input2 {
+  width: 40%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ACE;
+  font-family: Arial;
+  font-size: 3em;
+  color: orange;
+}
+
+#boxesTL {
+  top: 0;
+  width: 33%;
+  height: 33%;
+  background-color: #ACE;
+  position: absolute;
+  margin: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+#boxesTM {
+  top: 0;
+  left: 33%;
+  width: 33%;
+  height: 33%;
+  background-color: #999;
+  position: absolute;
+  margin: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#boxesTR {
+  top: 0;
+  left: 66%;
+  width: 33%;
+  height: 33%;
+  background-color: #ACE;
+  position: absolute;
+  margin: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+#boxesML {
+  top: 33%;
+  width: 33%;
+  height: 33%;
+  background-color: #999;
+  position: absolute;
+  margin: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+#boxesMM {
+  top: 33%;
+  left: 33%;
+  width: 33%;
+  height: 33%;
+  background-color: #ACE;
+  position: absolute;
+  margin: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+#boxesMR {
+  top: 33%;
+  left: 66%;
+  width: 33%;
+  height: 33%;
+  background-color: #999;
+  position: absolute;
+  margin: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+#boxesBL {
+  top: 66%;
+  width: 33%;
+  height: 33%;
+  background-color: #ACE;
+  position: absolute;
+  margin: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+#boxesBM {
+  top: 66%;
+  left: 33%;
+  width: 33%;
+  height: 33%;
+  background-color: #999;
+  position: absolute;
+  margin: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+#boxesBR {
+  top: 66%;
+  left: 66%;
+  width: 33%;
+  height: 33%;
+  background-color: #ACE;
+  position: absolute;
+  margin: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
