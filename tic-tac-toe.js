@@ -97,7 +97,7 @@ function getCurrentBoard() {
   }
   return moves;
 }
-
+// asdfkja;
 var turn = 0;
 
 $(document).ready(function() {
