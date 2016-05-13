@@ -47,6 +47,7 @@ var winningCombos = [
   [0, 1, 2],
   [3, 4, 5],
   [6, 7, 8],
+  [0, 3, 6],
   [1, 4, 7],
   [2, 5, 8],
   [0, 4, 8],
@@ -89,7 +90,7 @@ function playerOccupiesSquares(player, squares, board) {
 // function that returns an array consisting of the current moves on the board
 
 function getCurrentBoard() {
-  var buttons = $('button');
+  var buttons = $('.input');
   var moves = [];
   for (var i = 0; i < buttons.length; i++) {
     var button = $(buttons[i]);
@@ -99,8 +100,12 @@ function getCurrentBoard() {
 }
 // asdfkja;
 var turn = 0;
+var winsO = 0;
+var winsX = 0;
+var draws = 0;
 
 $(document).ready(function() {
+  $('play-again-button').hide();
   $('.input').click(function() {
     var symbol = $(this).text();
     if (symbol === '') {
@@ -111,13 +116,42 @@ $(document).ready(function() {
         $(this).text('X');
       }
       turn = turn + 1;
-      var board = getCurrentBoard()
+      var board = getCurrentBoard();
       var winner = checkWinner(board);
       if (winner) {
-        alert('The winner is ' + winner);
+        if(winner === "O") {
+          winsO++;
+        } else {
+          winsX++;
+        }
+        $('#winner')
+        .text('The winner is ' + winner)
+        .show();
+        $('#play-again-button').show();
+        updateScoreboard();
       }
     } else if (symbol === "O" || symbol === "X") {
         //disables button
     }
+    if (turn === 9) {
+      draws++;
+      $('#winner').text('Draw').show();
+      $('#play-again-button').show();
+      updateScoreboard();
+    }
+  });
+  $('#play-again-button').click(function () {
+    resetGame();
   });
 });
+
+function updateScoreboard() {
+  $('#scoreboard').text('O: ' + winsO + ' X: ' + winsX + ' Draws:' + draws);
+}
+
+function resetGame() {
+  turn = 0;
+  $('.input').text('');
+  $('#winner').hide();
+  $('play-again-button').hide();
+}
